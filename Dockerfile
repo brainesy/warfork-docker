@@ -5,9 +5,8 @@ RUN apt-get update \
     lib32gcc1=1:8.3.0-6 \
     lib32stdc++6=8.3.0-6 \
     wget=1.20.1-1.1 \
-    ca-certificates=20190110 \
     rsync=3.1.3-6 \
-    unzip=6.0-23+deb10u1 \
+    unzip \
     tmux \
     jq \
     bc \
@@ -27,6 +26,9 @@ RUN apt-get update \
     libcurl3-gnutls \
     libcurl4-gnutls-dev \
     wait-for-it \
+    cron \
+    sudo \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 RUN groupadd -r -g 999 warfork && useradd -r -m -g warfork -u 999 warfork
